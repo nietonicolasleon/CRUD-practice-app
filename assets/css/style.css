@@ -5,7 +5,11 @@
     --dark: #2b2d4c;
     --light: #adb4db;
     --border: #dee2e6;
-    --border-btn: #ed82f4;
+    --border-btn: #edf2f4;
+}
+
+body{
+    background-color: whitesmoke;
 }
 
 *{
@@ -60,7 +64,7 @@ a{
 }
 
 .text-gradient{
-    background: linear-gradient(to right, #8e2de2, #4a00e0);
+    background: linear-gradient(to right, purple, #811331, #800020, #c41e3a, crimson);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -73,17 +77,17 @@ a{
 }
 
 #site-main{
-    margin-top: 6em;
+    margin-top: 2em;
     font-family: 'PT Sans', sans-serif;
 }
 
-#site-main .container .box-nav{
+#site-main .container .box-nav > a{
     font-size: 1em;
     padding: .5em 1em;
 }
 
-#site-main .container{
-    margin: 2em 0;
+#site-main .container form{
+    margin: 2em -1em;
 }
 
 table{
@@ -98,17 +102,30 @@ table{
     border-top: 1px solid var(--border);
 }
 
+#pencil{
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0.8em;
+    margin-top: 0.5em;
+}
+
+#cross{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0.8em;
+}
+
 .table td > a.btn{
     padding: .3em 1em;
     font-size: 1.1em;
-    margin: 0.2em;
+    margin: 2em;
 }
 
 .table tr:hover{
     background-color: #06d6a0;
 }
 
-.table tr:hover td> a{
+.table tr:hover td > a{
     box-shadow: none;
 }
 
