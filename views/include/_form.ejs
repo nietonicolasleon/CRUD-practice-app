@@ -1,0 +1,56 @@
+            <!--Formulario-->
+            <form method="POST" id="update_vino">
+                <div class="nuevo_vino">
+                    <div class="form-group">
+                        <label for="Codigo" class="text-light">C&oacute;digo: </label>
+                        <input type="text" name="codigo" value="" placeholder="25000">
+                    </div>
+                    <div class="form-group">
+                        <label for="Marca" class="text-light">Marca: </label>
+                        <input type="text" name="marca" value="" placeholder="Trumpeter Reserve">
+                    </div>
+                    <div class="form-group">
+                        <label for="Nombre" class="text-light">Nombre: </label>
+                        <input type="text" name="nombre" value="" placeholder="Trumpeter Reserve Blend">
+                    </div>
+                    <div class="form-group">
+                        <label for="Uva" class="text-light">Uva: </label>
+                        <input type="text" name="uva" value="" placeholder="Malbec, Cabernet Sauvignon">
+                    </div>
+                    <div class="form-group">
+                        <label for="Año" class="text-light">Año: </label>
+                        <input type="text" name="año" value="" placeholder="2020">
+                    </div>
+                    <div class="form-group">
+                        <label for="Contenido" class="text-light">Contenido: </label>
+                        <div class="radio inline">
+                            <input type="radio" id="radio-1" name="contenido" value="375 ml">
+                            <label for="radio-1" class="radio-label">375 ml</label>
+                        </div>
+                        <div class="radio inline">
+                            <input type="radio" id="radio-2" name="contenido" value="750 ml">
+                            <label for="radio-2" class="radio-label">750 ml</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="Cantidad" class="text-light">Cantidad: </label>
+                        <input type="number" name="cantidad" value="" placeholder="6" min="0" max="25">
+                    </div>
+                    <div class="form-group">
+                        <label for="Precio Caja" class="text-light">Precio Caja: $</label>
+                        <input type="text" name="precio caja" value="" placeholder="3600">
+                    </div>
+                    <div class="form-group">
+                        <label for="Precio Individual" class="text-light">Precio Individual: $</label>
+                        <input type="text" name="precio individual" value="" placeholder="600">
+                    </div>
+                    <div class="form-group">
+                        <label for="Precio Publicado" class="text-light">Precio Publicado: $</label>
+                        <input type="text" name="precio publicado" value="" placeholder="750">
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn text-dark update">Guardar Vino</button>
+                    </div>
+                </div>
+            </form>
+            <!--Close Formulario-->
