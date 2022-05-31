@@ -2,7 +2,43 @@
 <!--Incluir _Header-->
 <%- include('include/_header)%>
 <!--Close Incluir Header-->
-
+    <!--Sección Principal-->
+    <main id="site-main">
+        <div class="container">
+            <div class="box-nav dflex justify-between">
+                <a href="/add-wine" class="border-shadow">
+                    <span class="text-gradient">Nuevo Vino <i class="fa-solid fa-wine-bottle"></i></span>
+                </a>
+            </div>
+            <!--Formulario-->
+            <form action="/" method="POST">
+                <table class="table">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>C&oacute;digo</th>
+                            <th>Marca</th>
+                            <th>Nombre</th>
+                            <th>Uva(s)</th>
+                            <th>Año</th>
+                            <th>Contenido</th>
+                            <th>Cantidad</th>
+                            <th>Precio por Caja</th>
+                            <th>Precio Individual</th>
+                            <th>Precio Caja sugerido</th>
+                            <th>Precio Individual sugerido</th>
+                            <th>Precio Publicado</th>
+                            <th>Acci&oacute;n</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <%- include('include/_show)%>
+                    </tbody>
+                </table>
+            </form>
+            <!--Close Formulario-->
+        </div>
+    </main>
+    <!--Close Sección Principal-->
 
 <!--Incluir _Footer-->
 <%- include('include/_footer)%>
