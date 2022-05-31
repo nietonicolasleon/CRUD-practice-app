@@ -1,25 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CRUD App</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="/assets/css/style.css">
-</head>
-<body>
-    <!--Header-->
-    <header id="header">
-        <nav>
-            <div class="container">
-                <div class="text-center">
-                    <a href="/" class="nav-brand text-dark">Sistema de Control de Stock de Amphora Vinos</a>
-                </div>
-            </div>
-        </nav>
-    </header>
-    <!--Close Header-->
+<!--Incluir _Header-->
+<%- include ("include/_header") %>
+<!--Close Incluir Header-->
     <!--Sección Principal-->
     <main id="site-main">
         <div class="container">
@@ -29,9 +10,10 @@
                 </div>
             </div>
             <div class="form-title text-center">
-                <h2 class="text-dark">Nuevo Vino</h2>
-                <span class="text-light">Ingrese los datos en el formulario para agregar un nuevo vino</span>
+                <h2 class="text-dark">Editar Vino</h2>
+                <span class="text-light">Ingrese los datos en el formulario para editar el vino</span>
             </div>
+            <!--Agregamos el formulario-->
             <!--Formulario-->
             <form method="POST" id="update_vino">
                 <div class="nuevo_vino">
@@ -91,5 +73,6 @@
         </div>
     </main>
     <!--Close Sección Principal-->
-</body>
-</html>
+<!--Incluir _Footer-->
+<%- include ("include/_footer") %>
+<!--Close Incluir _Footer-->

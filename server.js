@@ -29,4 +29,12 @@ app.get('/',(req, res)=>{
     res.render('index');
 })
 
+app.get('/add-vino',(req, res)=>{
+    res.render('add_vino');
+})
+
+app.get('/update-vino',(req, res)=>{
+    res.render('update_vino');
+})
+
 app.listen(3000,()=>{console.log(`Server is running on http://localhost:${PORT}`)});

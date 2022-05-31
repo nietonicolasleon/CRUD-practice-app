@@ -171,10 +171,12 @@ table{
     margin: auto;
 }
 
+#add_vino .form-group
 #update_vino .form-group{
     margin: .4em 0;
 }
 
+#add_vino .form-group input[type='text']
 #update_vino .form-group input[type='text']{
     width: 100%;
     padding: .6em 1em;
@@ -185,6 +187,7 @@ table{
     border-radius: .2em;
 }
 
+#add_vino .form-group .radio
 #update_vino .form-group .radio{
     margin: 1em 2em;
 }
@@ -229,6 +232,7 @@ table{
     background: #b4b4b4;
 }
 
+#add_vino .form-group .btn
 #update_vino .form-group .btn{
     width: 100%;
     padding: .9em 1em;
@@ -242,6 +246,7 @@ table{
     margin: .5em 0;
 }
 
+#add_vino .form-group .btn:hover
 #update_vino .form-group .btn:hover{
     background-color: var(--dark);
     color: var(--border);
