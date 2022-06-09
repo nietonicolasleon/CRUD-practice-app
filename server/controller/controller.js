@@ -39,7 +39,13 @@ exports.create = (req, res) =>{
 
 // Conseguir y retornar todos los vinos / solo uno
 exports.find = (req, res) =>{
-
+    VinoBDD.find()
+    .then(vino =>{
+        res.send(vino)
+    })
+    .catch(err =>{
+        res.status(500).send({ message : err.message || "Ocurrió un error al buscar la información del vino" })
+    })
 }
 
 // Modificar un nuevo vino por su id
