@@ -72,5 +72,21 @@ exports.update = (req, res) =>{
 
 // Borrar un vino con su id
 exports.delete = (req, res) =>{
+    const id = req.params.id;
 
+    VinoBDD.findByIdAndDelete(id)
+    .then(data =>{
+        if (data) {
+            res.status(404).send({message : `No se puede borrar el vino con la id ${id} . La id puede ser errónea`})
+        }else{
+            res.send({
+                message : "Vino borrado exitosamente"
+            })
+        }
+    })
+    .catch(err =>{
+        res.status(500).send({
+            message : "No se puede borrar el vino con la id: " + id
+        });
+    });
 }
