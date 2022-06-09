@@ -39,13 +39,29 @@ exports.create = (req, res) =>{
 
 // Conseguir y retornar todos los vinos / solo uno
 exports.find = (req, res) =>{
-    VinoBDD.find()
-    .then(vino =>{
-        res.send(vino)
-    })
-    .catch(err =>{
-        res.status(500).send({ message : err.message || "Ocurrió un error al buscar la información del vino" })
-    })
+
+    if(req.query.id){
+        const id = req.query.id;
+        VinoBDD.findById(id)
+        .then(data =>{
+            if(data){
+                res.status(400).send({message: "No se encontró el vino con la id: " + id})
+            }else{
+                res.send(data)
+            }
+        })
+        .catch(err =>{
+            res.status(500).send({message : "Error al buscar al vino con la id: " + id})
+        })
+    }else{
+        VinoBDD.find()
+        .then(vino =>{
+            res.send(vino)
+        })
+        .catch(err =>{
+            res.status(500).send({ message : err.message || "Ocurrió un error al buscar la información del vino" })
+        })
+    }
 }
 
 // Modificar un nuevo vino por su id
