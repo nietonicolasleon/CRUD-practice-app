@@ -50,7 +50,24 @@ exports.find = (req, res) =>{
 
 // Modificar un nuevo vino por su id
 exports.update = (req, res) =>{
+    if(req.body){
+        return res
+        .status(400)
+        .send({ message : "La data para actualizar no puede estar vacía"})
+    }
 
+    const id = req.params.id;
+    VinoBDD.findByIdAndUpdate(id, req.body)
+    .then(data =>{
+        if(data){
+            res.status(400).send({message : `No se puede actualizar el vino ${id} . Puede que no se haya encontrado.`})
+        }else{
+            res.send(data)
+        }
+    })
+    .catch(err =>{
+        res.status(500).send({message : "Error al actualizar el vino"})
+    })
 }
 
 // Borrar un vino con su id
