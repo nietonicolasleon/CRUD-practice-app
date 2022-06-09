@@ -16,5 +16,11 @@ exports.add_vino = (req, res) =>{
 }
 
 exports.update_vino = (req, res) =>{
-    res.render('update_vino');
+    axios.get('http://localhost:3000/api/vinos', {params : {id : req.query.id}})
+    .then(function(vinodata){
+        res.render('update_vino', {vino: vinodata.data})
+    })
+    .catch(err =>{
+        res.send(err);
+    })
 }

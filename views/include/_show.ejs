@@ -13,7 +13,7 @@
     <td><%= vinos[i].PrecioIndividualAumento %></td>
     <td><%= vinos[i].PrecioPublicado %></td>
     <td>
-        <a href="/update-vino" class="btn border-shadow update">
+        <a href="/update-vino?id=<%= vinos[i]._id %>" class="btn border-shadow update">
             <span class="text-gradient"><i class="fas fa-pencil-alt" id="pencil"></i></span>
         </a>
         <a href="#" class="btn border-shadow delete">
