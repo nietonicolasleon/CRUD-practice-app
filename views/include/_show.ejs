@@ -1,16 +1,17 @@
+<% for(var i = 0; i < vinos.length; i++) {%>
 <tr>
-    <td>25000</td>
-    <td>San Felipe Roble</td>
-    <td>San Felipe Roble Malbec</td>
-    <td>Malbec</td>
-    <td>2021</td>
-    <td>750 ml</td>
-    <td>9</td>
-    <td>$ 2400</td>
-    <td>$ 400</td>
-    <td>$ 3120</td>
-    <td>$ 520</td>
-    <td>$ 600</td>
+    <td><%= vinos[i].codigo %></td>
+    <td><%= vinos[i].marca %></td>
+    <td><%= vinos[i].nombre %></td>
+    <td><%= vinos[i].uvas %></td>
+    <td><%= vinos[i].anio %></td>
+    <td><%= vinos[i].contenido %></td>
+    <td><%= vinos[i].cantidad %></td>
+    <td><%= vinos[i].PrecioCaja %></td>
+    <td><%= vinos[i].PrecioIndividual %></td>
+    <td><%= vinos[i].PrecioCajaAumento %></td>
+    <td><%= vinos[i].PrecioIndividualAumento %></td>
+    <td><%= vinos[i].PrecioPublicado %></td>
     <td>
         <a href="/update-vino" class="btn border-shadow update">
             <span class="text-gradient"><i class="fas fa-pencil-alt" id="pencil"></i></span>
@@ -20,3 +21,4 @@
         </a>
     </td>
 </tr>
+<% } %>
