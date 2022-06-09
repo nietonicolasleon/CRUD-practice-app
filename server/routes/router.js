@@ -24,5 +24,8 @@ route.get('/update-vino', services.update_vino);
 
 //API
 route.post('/api/vinos', controller.create);
+route.get('/api/vinos', controller.find);
+route.put('/api/vinos/:id', controller.update);
+route.delete('/api/vinos/:id', controller.delete);
 
 module.exports = route
