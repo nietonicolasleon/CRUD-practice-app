@@ -28,7 +28,8 @@ exports.create = (req, res) =>{
     vino
         .save(vino)
         .then(data =>{
-            res.send(data)
+            //res.send(data)
+            res.redirect('/add-vino')
         })
         .catch(err =>{
             res.status(500).send({
