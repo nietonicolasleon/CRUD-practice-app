@@ -1,24 +1,24 @@
 <% for(var i = 0; i < vinos.length; i++) {%>
-<tr>
-    <td><%= vinos[i].codigo %></td>
-    <td><%= vinos[i].marca %></td>
-    <td><%= vinos[i].nombre %></td>
-    <td><%= vinos[i].uvas %></td>
-    <td><%= vinos[i].anio %></td>
-    <td><%= vinos[i].contenido %></td>
-    <td><%= vinos[i].cantidad %></td>
-    <td><%= vinos[i].PrecioCaja %></td>
-    <td><%= vinos[i].PrecioIndividual %></td>
-    <td><%= vinos[i].PrecioCajaAumento %></td>
-    <td><%= vinos[i].PrecioIndividualAumento %></td>
-    <td><%= vinos[i].PrecioPublicado %></td>
-    <td>
-        <a href="/update-vino?id=<%= vinos[i]._id %>" class="btn border-shadow update">
-            <span class="text-gradient"><i class="fas fa-pencil-alt" id="pencil"></i></span>
-        </a>
-        <a class="btn border-shadow delete" data-id="<%= vinos[i]._id %>">
-            <span class="text-gradient"><i class="fas fa-times" id="cross"></i></span>
-        </a>
-    </td>
-</tr>
-<% } %>
+    <tr>
+        <td><%= vinos[i].codigo %></td>
+        <td><%= vinos[i].marca %></td>
+        <td><%= vinos[i].nombre %></td>
+        <td><%= vinos[i].uvas %></td>
+        <td><%= vinos[i].anio %></td>
+        <td><%= vinos[i].contenido %></td>
+        <td><%= vinos[i].cantidad %></td>
+        <td><%= vinos[i].PrecioCaja %></td>
+        <td><%= vinos[i].PrecioIndividual %></td>
+        <td><%= vinos[i].PrecioCajaAumento %></td>
+        <td><%= vinos[i].PrecioIndividualAumento %></td>
+        <td><%= vinos[i].PrecioPublicado %></td>
+        <td>
+            <a href="/update-vino?id=<%= vinos[i]._id %>" class="btn border-shadow update">
+                <span class="text-gradient"><i class="fas fa-pencil-alt" id="pencil"></i></span>
+            </a>
+            <a class="btn border-shadow delete" data-id="<%= vinos[i]._id %>">
+                <span class="text-gradient"><i class="fas fa-times" id="cross"></i></span>
+            </a>
+        </td>
+    </tr>
+    <% } %>

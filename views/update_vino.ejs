@@ -19,6 +19,7 @@
                 <div class="nuevo_vino">
                     <div class="form-group">
                         <label for="Codigo" class="text-light">C&oacute;digo: </label>
+                        <input type="hidden" name="id" value="<%= vino._id%>">
                         <input type="text" name="codigo" value="<%= vino.codigo%>" placeholder="25000">
                     </div>
                     <div class="form-group">
@@ -34,8 +35,8 @@
                         <input type="text" name="uvas" value="<%= vino.uvas%>" placeholder="Malbec, Cabernet Sauvignon">
                     </div>
                     <div class="form-group">
-                        <label for="Año" class="text-light">Año: </label>
-                        <input type="text" name="año" value="<%= vino.anio%>" placeholder="2020">
+                        <label for="anio" class="text-light">Año: </label>
+                        <input type="text" name="anio" value="<%= vino.anio%>" placeholder="2020">
                     </div>
                     <div class="form-group">
                         <label for="Contenido" class="text-light">Contenido: </label>

@@ -1,4 +1,3 @@
-
 $("#add_vino").submit(function(event){
     alert("Data insertada exitosamente");
 })
@@ -7,7 +6,7 @@ $("#update_vino").submit(function(event){
     event.preventDefault();
     var unindexed_array = $(this).serializeArray();
     var data = {}
-
+    
     $.map(unindexed_array, function(n, i){
         data[n['name']] = n['value']
     })
@@ -23,7 +22,7 @@ $("#update_vino").submit(function(event){
     })
 })
 
-if (window.location.pathname == "/") {
+if (window.location.pathname == '/') {
     $ondelete = $(".table tbody td a.delete");
     $ondelete.click(function(){
         var id = $(this).attr("data-id")
